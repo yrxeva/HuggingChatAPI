@@ -16,5 +16,5 @@ RUN apk add --no-cache ca-certificates && update-ca-certificates
 WORKDIR /app
 RUN mkdir config
 COPY --from=builder /app/bin/* /app
-EXPOSE 80
+EXPOSE 10080
 ENTRYPOINT ["/app/server"]
